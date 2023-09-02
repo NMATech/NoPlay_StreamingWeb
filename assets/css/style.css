@@ -1,0 +1,514 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: monospace;
+}
+
+body {
+  font-family: "Lora", serif;
+  font-size: 18px;
+  background-color: #ddd;
+  overflow-x: hidden;
+}
+
+img {
+  width: 100%;
+}
+
+.container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 50px 1fr max-content 2fr 0.5fr;
+  grid-template-areas:
+    "nav"
+    "head"
+    "list"
+    "main"
+    "footer";
+}
+
+/* Navbar */
+nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* grid-template-areas: "logo menu"; */
+  grid-area: nav;
+  background-color: #141e46;
+}
+.logoName {
+  /* grid-area: logo; */
+  display: grid;
+  grid-template-columns: min-content min-content;
+  grid-template-areas: "logo nama";
+  gap: 20px;
+  cursor: pointer;
+}
+.logoName img {
+  margin-left: 20px;
+  grid-area: logo;
+  width: 36px;
+  place-self: center;
+}
+.logoName h4 {
+  grid-area: nama;
+  place-self: center;
+  font-size: 1.5em;
+  color: white;
+}
+.container ul {
+  display: grid;
+  list-style-type: none;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  place-content: center;
+}
+.container ul li a {
+  text-decoration: none;
+  color: white;
+}
+.container ul li a:hover {
+  background-color: white;
+  color: #333;
+  border-radius: 5px;
+  transition: ease-in 0.5s;
+}
+.menu-toggle {
+  display: none;
+}
+
+/* Header */
+header {
+  display: grid;
+  grid-template-columns: 1fr;
+  place-items: center end;
+  padding-right: 180px;
+  color: white;
+  grid-area: head;
+  min-height: 300px;
+  background-image: url("../image/movie-banner-1024x398.png");
+  background-size: cover;
+  background-position: center;
+}
+
+/* Container List */
+.containerList {
+  margin-top: 15px;
+  border-top: 0.5px solid black;
+  display: grid;
+  grid-area: list;
+  grid-template-columns: 2fr 2fr 1.5fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "listKdrama listJdrama listRecomend"
+    "listKdrama listMovies listRecomend";
+}
+.listKdrama {
+  grid-area: listKdrama;
+}
+.containerList ul {
+  display: none;
+}
+.wrap {
+  display: grid;
+  width: 80%;
+  margin: 20px auto;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+.container h5 {
+  background-color: #bb2525;
+  border-radius: 3px;
+  color: white;
+  padding: 5px;
+  font-size: 1.3em;
+}
+.list {
+  font-size: 0.9em;
+}
+.list p {
+  padding: 5px;
+  border: 0.5px solid black;
+}
+.list p a {
+  text-decoration: none;
+  list-style: none;
+  color: #333;
+}
+
+.listJdrama {
+  grid-area: listJdrama;
+  display: grid;
+}
+.listMovies {
+  grid-area: listMovies;
+  display: grid;
+}
+
+/* List recommended */
+.listRecommended {
+  grid-area: listRecomend;
+  border-left: 0.5px solid black;
+}
+.listRecommended ul {
+  background-color: #ddd;
+  display: grid;
+  text-align: center;
+  padding: 5px;
+  border-bottom: 0.5px solid black;
+}
+.listRecommended ul li {
+  cursor: pointer;
+}
+#topDaysLi {
+  background-color: #bb2525;
+  border-radius: 10px;
+  color: white;
+}
+.listofTop {
+  display: flex;
+  width: 80%;
+  margin: 20px auto;
+  height: 60px;
+}
+.wrapImageListofTop {
+  width: 15%;
+  height: 100%;
+  background-color: #bb2525;
+}
+.wrapNumber {
+  margin: 10px;
+  display: grid;
+  place-content: center;
+}
+.wrapTextListofTop {
+  margin: auto;
+  margin-left: 10px;
+}
+.wrapTextListofTop p a {
+  text-decoration: none;
+  color: black;
+}
+
+/* Content */
+.containerContent {
+  grid-area: main;
+  display: grid;
+}
+.containerContent h3 {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  padding-top: 20px;
+}
+.listDramaofContent {
+  width: 80%;
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+}
+.imageofContent {
+  text-align: center;
+  margin: 10px;
+}
+.imageofContent h4 a {
+  text-decoration: none;
+  color: black;
+}
+
+/* Footer */
+footer {
+  display: grid;
+  grid-area: footer;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas:
+    "first first two third"
+    "first first two third";
+  background-color: #141e46;
+  color: white;
+}
+.first {
+  grid-area: first;
+}
+.wraper {
+  width: 80%;
+  margin: 20px auto;
+}
+.sosmed {
+  display: grid;
+  grid-template-columns: 0.5fr 0.5fr;
+  grid-template-areas:
+    "logo donwloadtxt"
+    "logo appStore";
+  width: fit-content;
+  padding: 5px;
+  cursor: pointer;
+  border: 1px solid #555;
+  border-radius: 20px;
+  margin: 10px;
+}
+.sosmed:hover {
+  border: 1px solid white;
+}
+.sosmed img {
+  grid-area: logo;
+  width: 36px;
+}
+.donwloadTxt {
+  grid-area: donwloadtxt;
+  width: max-content;
+  margin-left: 5px;
+}
+.AppStore {
+  grid-area: appStore;
+  margin-left: 5px;
+  font-weight: 600;
+}
+.two {
+  grid-area: two;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: start;
+  padding: 20px;
+}
+.two ul li {
+  margin: 5px;
+}
+.third {
+  grid-area: third;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: start;
+  padding: 20px;
+  font-size: 0.8em;
+}
+.third ul li {
+  margin: 5px;
+}
+
+/* Media Queries Breakpoint */
+@media (min-width: 768px) and (max-width: 992px) {
+  nav {
+    font-size: 0.9em;
+  }
+  .container {
+    grid-template-rows: 50px 0.5fr max-content max-content 0.5fr;
+  }
+  .menu-toggle {
+    display: none;
+  }
+  .container ul {
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  }
+  header {
+    font-size: 0.8em;
+  }
+  header h2 {
+    margin-right: -70px;
+  }
+  .containerList {
+    margin: auto;
+    grid-template-columns: 2fr 2fr;
+    grid-template-rows: repeat(3, max-content);
+    grid-template-areas:
+      "listKdrama listJdrama"
+      "listKdrama listMovies"
+      "listRecomend listRecomend";
+  }
+  .listRecommended {
+    border-left: none;
+  }
+  .listRecommended ul {
+    width: 50%;
+    margin: auto;
+    font-size: 0.9em;
+  }
+  .listofTop {
+    width: 50%;
+  }
+  .wrapImageListofTop img {
+    width: 50px;
+  }
+  .two ul li {
+    font-size: 0.9em;
+  }
+  .third ul li {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 0.5fr max-content max-content 0.5fr;
+  }
+
+  nav #menuNav {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    justify-content: center;
+    align-items: center;
+    background-color: #141e46;
+    width: 60%;
+    height: 100px;
+    margin-top: 50px;
+    transform: translateX(100%);
+    transition: all 1s;
+    opacity: 0;
+  }
+  #menuNav li {
+    margin: 2px;
+  }
+
+  #menuNav.slide {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    height: 20px;
+    width: fit-content;
+    justify-content: space-between;
+    align-self: center;
+    justify-self: end;
+    margin-right: 20px;
+    position: relative;
+  }
+  .menu-toggle input {
+    position: absolute;
+    height: 28px;
+    width: 30px;
+    left: -2px;
+    top: -2px;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+  }
+  .menu-toggle span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: white;
+    border-radius: 5px;
+    transition: all 0.5s;
+  }
+
+  .menu-toggle span:nth-child(2) {
+    transform-origin: 0 0;
+  }
+  .menu-toggle input:checked ~ span:nth-child(2) {
+    transform: rotate(45deg) translate(-1px, -1px);
+  }
+  .menu-toggle span:nth-child(4) {
+    transform-origin: 0 100%;
+  }
+  .menu-toggle input:checked ~ span:nth-child(3) {
+    transform: scale(0);
+    opacity: 0;
+  }
+  .menu-toggle input:checked ~ span:nth-child(4) {
+    transform: rotate(-45deg);
+  }
+
+  nav {
+    font-size: 0.9em;
+  }
+  .container ul {
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  }
+  .container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px max-content max-content 0.5fr;
+    grid-template-areas:
+      "nav"
+      "list"
+      "main"
+      "footer";
+  }
+
+  header {
+    display: none;
+    font-size: 0.8em;
+  }
+  header h2 {
+    width: max-content;
+  }
+  .containerList {
+    margin: auto;
+    grid-template-columns: 2fr 2fr;
+    grid-template-rows: repeat(3, max-content);
+    grid-template-areas:
+      "listBtn listBtn"
+      "listKdrama listKdrama"
+      "listRecomend listRecomend";
+    border-top: 0px;
+  }
+  .containerList ul {
+    margin-top: 10px;
+    font-size: 0.8em;
+    display: grid;
+    grid-area: listBtn;
+  }
+  .listJdrama {
+    grid-area: listKdrama;
+    display: none;
+  }
+  .listMovies {
+    grid-area: listKdrama;
+    display: none;
+  }
+  .listRecommended {
+    border-left: none;
+  }
+  .listRecommended ul {
+    width: 100%;
+    margin: auto;
+    font-size: 0.8em;
+  }
+  #listBtnKdrama {
+    background-color: #bb2525;
+    border-radius: 10px;
+    color: white;
+  }
+  .listofTop {
+    width: 50%;
+  }
+  .wrapImageListofTop img {
+    width: 50px;
+  }
+  .two ul li {
+    font-size: 0.9em;
+  }
+  .third ul li {
+    font-size: 10px;
+  }
+
+  footer {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-areas:
+      "first"
+      "two"
+      "third";
+  }
+  .two {
+    margin-left: 40px;
+    justify-content: start;
+    align-items: start;
+    padding: 20px;
+  }
+  .third {
+    margin-left: 40px;
+    flex-direction: row;
+    justify-content: start;
+    align-items: start;
+  }
+}

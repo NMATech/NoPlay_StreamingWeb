@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NoPlay</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Navbar Section -->
+      <nav>
+        <div class="logoName">
+          <img src="./assets/image/video-player_777242.png" alt="NoPlay" />
+          <h4>NoPlay</h4>
+        </div>
+        <ul id="menuNav">
+          <li><a href="">Home</a></li>
+          <li><a href="">My Series</a></li>
+          <li><a href="">Contact</a></li>
+          <li><a href="">About</a></li>
+        </ul>
+
+        <div class="menu-toggle">
+          <input type="checkbox" />
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+
+      <!-- Navbar Section end -->
+
+      <!-- Header Section -->
+      <header>
+        <h2>Nikmati Layanan Streaming Terbaik</h2>
+      </header>
+      <!-- Header Section end -->
+
+      <!-- List Section -->
+      <div class="containerList">
+        <ul class="listMobile">
+          <li onclick="listMobile(1)" id="listBtnKdrama">List Kdrama</li>
+          <li onclick="listMobile(2)" id="listBtnJdrama">List Jdrama</li>
+          <li onclick="listMobile(3)" id="listBtnMovies">List Movies</li>
+        </ul>
+        <div class="listKdrama" id="listKdrama">
+          <div class="wrap Kdrama">
+            <h5>List of Korean Drama</h5>
+            <div class="list listK">
+              <p class=""><a href="">18 Again</a></p>
+              <p class=""><a href="">Love All Play</a></p>
+              <p class=""><a href="">Zombie Detective</a></p>
+              <p class=""><a href="">Weak Hero Class</a></p>
+              <p class=""><a href="">Business Proposal</a></p>
+              <p class=""><a href="">Extracuriculler</a></p>
+              <p class=""><a href="">Save Me</a></p>
+              <p class=""><a href="">The Moment when It Starts Again</a></p>
+              <p class=""><a href="">Fight for My Way</a></p>
+              <p class=""><a href="">The Killing Vote</a></p>
+              <p class=""><a href="">My Worst Neighbor</a></p>
+              <p class=""><a href="">See You in My 19th Life</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="listJdrama" id="listJdrama">
+          <div class="wrap Jdrama">
+            <h5>List of Japanese Drama</h5>
+            <div class="list listJ">
+              <p class=""><a href="">Mystery to Lunakare</a></p>
+              <p class=""><a href="">Unnatural</a></p>
+              <p class=""><a href="">3 Nen A Gumi</a></p>
+              <p class=""><a href="">Kazoku Game</a></p>
+              <p class=""><a href="">MIU 404</a></p>
+              <p class=""><a href="">Soredomo, Ikite yuku</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="listMovies" id="listMovies">
+          <div class="wrap Jdrama">
+            <h5>List of Movies</h5>
+            <div class="list listM">
+              <p class=""><a href="">Miracle in Cell No. 7</a></p>
+              <p class=""><a href="">Hope</a></p>
+              <p class=""><a href="">Parasite</a></p>
+              <p class=""><a href="">Your Eyes Tell</a></p>
+              <p class=""><a href="">Hachiko Monogatari</a></p>
+              <p class=""><a href="">Be with You</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="listRecommended">
+          <ul>
+            <li onclick="listRecommend(1)" id="topDaysLi">TOP DAYS</li>
+            <li onclick="listRecommend(2)" id="topWeeksLi">TOP WEEKS</li>
+            <li onclick="listRecommend(3)" id="topMonthsLi">TOP MONTHS</li>
+          </ul>
+          <div class="listofTop">
+            <div class="wrapImageListofTop">
+              <img id="img1" src="/assets/image/CheerUp.jpg" alt="" />
+            </div>
+            <div class="wrapNumber">
+              <p>1</p>
+            </div>
+            <div class="wrapTextListofTop">
+              <p><a href="" id="txt1">Cheer Up (2022)</a></p>
+            </div>
+          </div>
+          <div class="listofTop">
+            <div class="wrapImageListofTop">
+              <img id="img2" src="/assets/image/RebornRich.jpg" alt="" />
+            </div>
+            <div class="wrapNumber">
+              <p>2</p>
+            </div>
+            <div class="wrapTextListofTop">
+              <p><a href="" id="txt2">Reborn Rich (2022)</a></p>
+            </div>
+          </div>
+          <div class="listofTop">
+            <div class="wrapImageListofTop">
+              <img id="img3" src="/assets/image/betweenUs.jpg" alt="" />
+            </div>
+            <div class="wrapNumber">
+              <p>3</p>
+            </div>
+            <div class="wrapTextListofTop">
+              <p><a href="" id="txt3">Between Us (2022)</a></p>
+            </div>
+          </div>
+          <div class="listofTop">
+            <div class="wrapImageListofTop">
+              <img id="img4" src="/assets/image/curtainCall.jpg" alt="" />
+            </div>
+            <div class="wrapNumber">
+              <p>4</p>
+            </div>
+            <div class="wrapTextListofTop">
+              <p><a href="" id="txt4">Curtain Call (2022)</a></p>
+            </div>
+          </div>
+          <div class="listofTop">
+            <div class="wrapImageListofTop">
+              <img id="img5" src="/assets/image/RM.jpg" alt="" />
+            </div>
+            <div class="wrapNumber">
+              <p>5</p>
+            </div>
+            <div class="wrapTextListofTop">
+              <p><a href="" id="txt5">Running Man (2010)</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- List Section end -->
+
+      <!-- Content Section -->
+      <div class="containerContent">
+        <h3>List of Korean Drama</h3>
+        <div class="listDramaofContent">
+          <div class="imageofContent">
+            <img
+              src="/assets/image/Reply88.jpg"
+              alt="Reply 1988"
+              title="Reply 1988"
+            />
+            <h4><a href="">Reply 1988</a></h4>
+          </div>
+          <div class="imageofContent">
+            <img
+              src="/assets/image/MoveToHeaven.jpg"
+              alt="Move to Heaven"
+              title="Move to Heaven"
+            />
+            <h4><a href="">Move to Heaven (2021)</a></h4>
+          </div>
+          <div class="imageofContent">
+            <img
+              src="/assets/image/HospitalPlaylistS2.jpg"
+              alt="Hospital playlist Season 2"
+              title="Hospital playlist Season 2 "
+            />
+            <h4><a href="">Hospital Playlist Season 2</a></h4>
+          </div>
+          <div class="imageofContent">
+            <img
+              src="/assets/image/MyMister.jpg"
+              alt="My Mister"
+              title="My Mister 2018"
+            />
+            <h4><a href="">My Mister (2018)</a></h4>
+          </div>
+          <div class="imageofContent">
+            <img
+              src="/assets/image/theGloryP2.jpg"
+              alt="The Glory Part 2"
+              title="The GLory Part 2"
+            />
+            <h4><a href="">The Glory Part 2</a></h4>
+          </div>
+          <div class="imageofContent">
+            <img
+              src="/assets/image/TheLoveinYourEyes.jpg"
+              alt="The Love in your Eyes"
+              title="The Love in your Eyes"
+            />
+            <h4><a href="">The Love in your Eyes</a></h4>
+          </div>
+          <div class="imageofContent">
+            <img
+              src="/assets/image/drRomanticS3.jpg"
+              alt="Dr.Romantic Season 3"
+              title="Dr.Romantic Season 3"
+            />
+            <h4><a href="">Dr.Romantic Season 3</a></h4>
+          </div>
+          <div class="imageofContent">
+            <img
+              src="/assets/image/Vicenzo.jpg"
+              alt="Vicenzo 2021"
+              title="Vicenzo 2021"
+            />
+            <h4><a href="">Vicenzo 2021</a></h4>
+          </div>
+        </div>
+      </div>
+      <!-- Content Section end -->
+
+      <!-- Footer Section end -->
+      <footer>
+        <div class="first">
+          <div class="wraper">
+            <div class="textFooter">
+              <h2>NoPlay</h2>
+              <p style="font-size: 0.7em; color: #aaa">
+                @copyright 2023. All rights reverved.
+              </p>
+            </div>
+            <div class="sosmed">
+              <img src="/assets/image/apple_250545.png" alt="" />
+              <p style="font-size: 0.7em" class="donwloadTxt">
+                Donwload on the
+              </p>
+              <p class="AppStore">App Store</p>
+            </div>
+            <div class="sosmed">
+              <img src="/assets/image/playstore.png" alt="" />
+              <p style="font-size: 0.7em" class="donwloadTxt">
+                Donwload on the
+              </p>
+              <p class="AppStore">Play Store</p>
+            </div>
+          </div>
+        </div>
+        <div class="two">
+          <ul>
+            <h3>About</h3>
+            <li><a href="">FAQ</a></li>
+            <li><a href="">About us</a></li>
+            <li><a href="">Contact us</a></li>
+            <li><a href="">Support us</a></li>
+          </ul>
+        </div>
+        <div class="third">
+          <ul>
+            <h3>Recommended</h3>
+            <li><a href="">Top 100 Korean Drama</a></li>
+            <li><a href="">Top 100 Japanese Dorama</a></li>
+            <li><a href="">Top 100 Asian Movies</a></li>
+            <li><a href="">Top 100 Asian Tv Shows</a></li>
+          </ul>
+        </div>
+      </footer>
+      <!-- Footer Section end -->
+    </div>
+
+    <!-- Script js -->
+    <script src="/assets/javascript/main.js"></script>
+  </body>
+</html>
